@@ -5,7 +5,7 @@ import java.util.Random;
 public class Macierz {
 
 	public static void main(String[] args) {
-	int M=10;
+	int M=5;
 	Macierz macierze=new Macierz(M);
 	System.out.println("Macierz A");
 	macierze.wypisz(macierze.A);
@@ -37,7 +37,7 @@ public class Macierz {
 		for(int i=0;i<tab.length;i++)
 		{
 			for(int j=0;j<tab[0].length;j++)
-				tab[i][j]=generator.nextInt()+ generator.nextDouble();
+				tab[i][j]=generator.nextInt(5);//+ generator.nextDouble();
 		}
 	}
 	
@@ -72,12 +72,13 @@ public class Macierz {
 		{
 			for(int j=0;j<T3[0].length;j++)
 			{
+				suma=0;
 				for(int k=0;k<T1.length;k++)
 				{
 					suma+=T1[i][k]*T2[k][j];
 				}
 				T3[i][j]=suma;
-				suma=0;
+				
 			}
 		}
 		System.out.println("Macierz wynikowa (iloczyn macierzy)");
